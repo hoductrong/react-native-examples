@@ -84,3 +84,4 @@ jobs:
           group: Testers
           notifyTesters: true
           debug: true
+          releaseNotes: ${{ github.ref }}
