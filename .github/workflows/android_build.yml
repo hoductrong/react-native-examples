@@ -75,8 +75,11 @@ jobs:
       #     groups: tester
       #     file: ${{steps.sign_app.outputs.signedReleaseFile}}
       - name: Distribute app to AppCenter
-        uses: microsoft/appcenter-action@v2
+        uses: wzieba/AppCenter-Github-Action@v1
         with:
-          app_secret: ${{ secrets.APPCENTER_API_TOKEN }}
+          appName: 'AwesomeApp'
+          token: ${{ secrets.APPCENTER_API_TOKEN }}
           file: ${{steps.sign_app.outputs.signedReleaseFile}}
           group: Testers
+          notifyTesters: true
+          debug: false
