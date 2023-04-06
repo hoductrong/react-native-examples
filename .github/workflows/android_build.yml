@@ -77,7 +77,7 @@ jobs:
       - name: Distribute app to AppCenter
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: 'AwesomeApp'
+          appName: tronghd-WolffunGame2021.onmicrosoft.com/AwesomeApp
           token: ${{ secrets.APPCENTER_API_TOKEN }}
           file: ${{steps.sign_app.outputs.signedReleaseFile}}
           group: Testers
