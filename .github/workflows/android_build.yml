@@ -2,6 +2,7 @@ name: Android Build ## name of the workflow
 
 on:
   workflow_dispatch: # To trigger manual build
+  push:
   release:
     types: [published] # only run the workflow when a new release has been published
 
@@ -81,5 +82,5 @@ jobs:
           token: ${{ secrets.APPCENTER_API_TOKEN }}
           file: ${{steps.sign_app.outputs.signedReleaseFile}}
           group: Testers
-          notifyTesters: true
-          debug: false
+          notifyTesters: false
+          debug: true
