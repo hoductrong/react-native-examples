@@ -82,5 +82,5 @@ jobs:
           token: ${{ secrets.APPCENTER_API_TOKEN }}
           file: ${{steps.sign_app.outputs.signedReleaseFile}}
           group: Testers
-          notifyTesters: false
+          notifyTesters: true
           debug: true
